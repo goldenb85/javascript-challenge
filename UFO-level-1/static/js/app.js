@@ -31,7 +31,7 @@ button.on("click", function() {
   var inputValue = inputElement.property("value");
   console.log(inputValue);
   console.log(tableData);
-  var filteredData = tableData.filter(ufoSighting => ufoSighting.datetime ===inputValue);
+  var filteredData = tableData.filter(ufoSighting => (ufoSighting.datetime ===inputValue));
   console.log(filteredData);
 
 // Use D3 to select the table body
@@ -42,6 +42,9 @@ var table = d3.select("table");
 tbody.html("");
 // Use D3 to set the table class to `table table-striped`
 table.attr("class", "table table-striped");
+
+
+if (inputValue!=="") {
 // Use d3 to append 1 cell per UFO sighting value 
 filteredData.forEach(function(ufoSighting){
     console.log(ufoSighting);
@@ -52,5 +55,17 @@ filteredData.forEach(function(ufoSighting){
         cell.text(value);
     });
 });
+}
+else {
+    tableData.forEach(function(ufoSighting){
+        console.log(ufoSighting);
+        var row =tbody.append("tr");
+    
+        Object.entries(ufoSighting).forEach(([key,value]) => {
+            var cell = row.append("td");
+            cell.text(value);
+        });
+    });
+}
 });
 
