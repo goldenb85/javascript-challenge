@@ -19,3 +19,6 @@ JavaScript, HTML, CSS
 UFO1:
 * [UFO1](UFO-level-1/ufo1.PNG)
 <img src="UFO-level-1/ufo1.PNG">
+UFO2:
+* [UFO2](UFO-level-2/ufo2.PNG)
+<img src="UFO-level-2/ufo2.PNG">
