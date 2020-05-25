@@ -14,5 +14,5 @@ There are two pages:<br>
 ## Data ##
 * [UFO Sightings Data](StarterCode/static/js/data.js)
 ## Tool ##
-
+JavaScript, HTML, CSS
 ## Visualization ##
