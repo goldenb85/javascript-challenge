@@ -24,7 +24,9 @@ tableData.forEach(function(ufoSighting){
 });
 // Select the button
 var button = d3.select("#filter-btn");
-var filteredData=[];
+// Keep Track of all filters
+var filters = {};
+
 button.on("click", function() {
 
   // Select the input element and get the raw HTML node
